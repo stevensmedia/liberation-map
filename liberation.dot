@@ -9,17 +9,42 @@ strict graph {
 	"Sunset Blvd"[ARTERIAL]
 	"Wilshire Blvd"[ARTERIAL]
 
+	"Angelino Heights" -- {"Echo Park", "Victor Heights"}
+	"Arts District" -- {"Little Tokyo", "Seafood District", "Union Station", "Warehouse District"}
 	"Bunker Hill" -- {"Crown Hill", "Civic Center", "Financial District", "Historic Core", "110"}
 	"Chinatown" -- {"Victor Heights", "Civic Center", "El Pueblo", "Dogtown", "Sunset Blvd"}
+	"City West"
 	"Civic Center" -- {"Temple Beaudry", "Chinatown", "El Pueblo", "Bunker Hill", "101", "Sunset Blvd"}
+	"Crown Hill" -- {"Westlake North", "Temple Beaudry", "City West", "Bunker Hill"}
 	"Dogtown" -- {"Chinatown", "Union Station"}
+	"East Hollywood South"
+	"Echo Park"
 	"El Pueblo" -- {"Civic Center", "Historic Core", "Chinatown", "Union Station"}
 	"Entertainment District" -- {"Financial District", "Fashion District", "Jewelry District"}
 	"Fashion District" -- {"Gallery Row", "Entertainment District", "Flower District", "Warehouse District"}
-	"Financial District" -- {"Bunker HIll", "Jewelry District", "Entertainment District", "110", "Wilshire Blvd"}
+	"Financial District" -- {"Bunker Hill", "Jewelry District", "Entertainment District", "110", "Wilshire Blvd"}
+	"Flower District" -- {"Gallery Row", "Fashion District", "Skid Row"}
+	"Fremont Place" -- {"Windsor Village", "Wilshire Blvd"}
 	"Gallery Row" -- {"Historic Core", "Toy District", "Fashion District", "Flower District"}
 	"Historic Core" -- {"El Pueblo", "Bunker Hill", "Jewelry District", "Little Tokyo", "Gallery Row"}
+	"Historic Filipinotown" -- {"Westlake North", "Temple Beaudry", "101"}
 	"Jewelry District" -- {"Financial District", "Entertainment District", "Historic Core"}
+	"Koreatown" -- {"Koreatown @ Beverly", "Koreatown @ Olympic", "MacArthur Park"}
+	"Koreatown @ Beverly" -- {"Saint Andrews Square", "East Hollywood South", "Rampart Village", "Koreatown"}
+	"Koreatown @ Olympic" -- {"Wilshire Park", "Koreatown"}
 	"Little Tokyo" -- {"Union Station", "Toy District", "Historic Core", "Arts District", "Seafood District"}
+	"MacArthur Park" -- {"Koreatown", "Rampart Village", "Westlake", "Wilshire Blvd"}
+	"Rampart Village" -- {"Koreatown @ Beverly", "MacArthur Park", "Westlake North" }
+	"Saint Andrews Square"
+	"Seafood District" -- {"Little Tokyo", "Skid Row", "Arts District", "Warehouse District"}
+	"Skid Row" -- {"Toy District", "Flower District", "Seafood District", "Warehouse District"}
+	"Temple Beaudry" -- {"Historic Filipinotown", "Crown Hill", "Civic Center"}
+	"Toy District" -- {"Little Tokyo", "Gallery Row", "Skid Row"}
 	"Union Station" -- {"El Pueblo", "Little Tokyo", "Dogtown", "Arts District"}
+	"Victor Heights" -- {"Chinatown", "Angelino Heights"}
+	"Warehouse District" -- {"Skid Row", "Fashion District", "Seafood District", "Arts District"}
+	"Westlake North" -- {"Rampart Village", "Westlake", "Historic Filipinotown", "Crown Hill"}
+	"Westlake"
+	"Wilshire Park" -- {"Windsor Village", "Koreatown @ Olympic", "Wilshire Blvd"}
+	"Windsor Village" -- {"Fremont Place", "Wilshire Park", "Wilshire Blvd"}
 }
