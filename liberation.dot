@@ -1,0 +1,25 @@
+#define NODE fillcolor="#e0e0e0",style="filled",width="1",height="1",shape="oval",fontisize="15",fontname="Helvetica"
+#define ROAD style="filled",width="2",height="2",shape="rectangle",fontsize="20"
+#define FREEWAY fillcolor="#ffb0b0",ROAD
+#define ARTERIAL fillcolor="#b0ffb0",ROAD
+strict graph {
+	node[NODE]
+	"110"[FREEWAY]
+	"101"[FREEWAY]
+	"Sunset Blvd"[ARTERIAL]
+	"Wilshire Blvd"[ARTERIAL]
+
+	"Bunker Hill" -- {"Crown Hill", "Civic Center", "Financial District", "Historic Core", "110"}
+	"Chinatown" -- {"Victor Heights", "Civic Center", "El Pueblo", "Dogtown", "Sunset Blvd"}
+	"Civic Center" -- {"Temple Beaudry", "Chinatown", "El Pueblo", "Bunker Hill", "101", "Sunset Blvd"}
+	"Dogtown" -- {"Chinatown", "Union Station"}
+	"El Pueblo" -- {"Civic Center", "Historic Core", "Chinatown", "Union Station"}
+	"Entertainment District" -- {"Financial District", "Fashion District", "Jewelry District"}
+	"Fashion District" -- {"Gallery Row", "Entertainment District", "Flower District", "Warehouse District"}
+	"Financial District" -- {"Bunker HIll", "Jewelry District", "Entertainment District", "110", "Wilshire Blvd"}
+	"Gallery Row" -- {"Historic Core", "Toy District", "Fashion District", "Flower District"}
+	"Historic Core" -- {"El Pueblo", "Bunker Hill", "Jewelry District", "Little Tokyo", "Gallery Row"}
+	"Jewelry District" -- {"Financial District", "Entertainment District", "Historic Core"}
+	"Little Tokyo" -- {"Union Station", "Toy District", "Historic Core", "Arts District", "Seafood District"}
+	"Union Station" -- {"El Pueblo", "Little Tokyo", "Dogtown", "Arts District"}
+}
