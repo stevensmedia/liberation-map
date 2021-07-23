@@ -20,7 +20,7 @@ strict graph {
 	"Bunker Hill" -- {"Crown Hill" "Civic Center" "Financial District" "Historic Core" "110"}
 	"Central Hollywood" -- {"WeHo East" "Hollywood Studio District" "Downtown Hollywood" "Theatre Row" "Santa Monica Blvd"}
 	"Chinatown" -- {"Victor Heights" "Civic Center" "El Pueblo" "Dogtown" "Sunset Blvd"}
-	"Citrus Square" -- {"Fairfax" "La Brea-Hancock" "Hancock @ Beverly"}
+	"Citrus Square" -- {"Fairfax" "La Brea-Hancock" "Hancock Park @ Beverly"}
 	"City West" -- {"Crown Hill" "Westlake" "Wilshire Blvd" "110"}
 	"Civic Center" -- {"Temple Beaudry" "Chinatown" "El Pueblo" "Bunker Hill" "101" "Sunset Blvd"}
 	"Crown Hill" -- {"Westlake North" "Temple Beaudry" "City West" "Bunker Hill"}
@@ -45,9 +45,11 @@ strict graph {
 	"Griffith Park" -- {"Hollywoodland" "Los Feliz" }
 	"Hancock Park" -- {"La Brea-Hancock" "Windsor Square" "Hancock Park @ Beverly" "Wilshire Blvd"}
 	"Hancock Park @ Beverly" -- {"Hancock Park @ Melrose" "Hancock Park"}
+	"Hancock Park @ Melrose" -- {"Hancock Park @ Beverly" "Melrose Neighborhood"}
 	"Historic Core" -- {"El Pueblo" "Bunker Hill" "Jewelry District" "Little Tokyo" "Gallery Row"}
 	"Historic Filipinotown" -- {"Westlake North" "Temple Beaudry" "101"}
-	"Hollywood and Highland" -- {"Hollywood Dell" "101"}
+	"Hollywood and Highland" -- {"Sunset Square" "Hollywood Heights" "Yucca Corridor" "WeHo East" "Hollywood Blvd"}
+	"Hollywood Heights" -- {"Runyon Canyon Park" "Hollywood and Highland"}
 	"Hollywood Hills East" -- {"Hollywood Dell" "101"}
 	"Hollywood Reservoir" -- {"Hollywood Dell" "Hollywoodland"}
 	"Hollywood Dell" -- {"Hollywood Hills East" "Beachwood Canyon" "Hollywood Reservoir" "Franklin Village"}
@@ -64,14 +66,17 @@ strict graph {
 	"Los Feliz" -- {"Franklin Village" "Franklin Hills" "Griffith Park" "Hollywood Blvd"}
 	"MacArthur Park" -- {"Koreatown" "Rampart Village" "Westlake" "Wilshire Blvd"}
 	"Melrose" -- {"WeHo East" "Theatre Row" "Beverly Grove @ Melrose"}
+	"Melrose Neighborhood" -- {"Hancock Park @ Melrose" "Wilshire Park"}
 	"Melrose Hill" -- {"Hollywood Studio District" "East Hollywood" "Santa Monica Blvd"}
 	"Norma Triangle" -- {"WeHo Center City" "Sunset Blvd" "Santa Monica Blvd"}
 	"Park La Brea" -- {"Beverly Grove" "Wilshire Blvd"}
 	"Rampart Village" -- {"Koreatown @ Beverly" "MacArthur Park" "Westlake North" }
+	"Runyon Canyon Park" -- {"Hollywood Heights"}
 	"Saint Andrews Square" -- {"Wilton Historic District" "Western-Wilton" "Larchmont East" "Koreatown @ Beverly"}
 	"Seafood District" -- {"Little Tokyo" "Skid Row" "Arts District" "Warehouse District"}
 	"Silver Lake"-- {"Franklin Hills" "Echo Park" "Sunset Blvd" "101"}
 	"Skid Row" -- {"Toy District" "Flower District" "Seafood District" "Warehouse District"}
+	"Sunset Square" -- {"Hollywood and Highland" "Hollywood Blvd"}
 	"Temple Beaudry" -- {"Historic Filipinotown" "Crown Hill" "Civic Center"}
 	"Theatre Row" -- {"Melrose" "Central Hollywood" "Santa Monica Blvd"}
 	"Toy District" -- {"Little Tokyo" "Gallery Row" "Skid Row"}
@@ -80,7 +85,7 @@ strict graph {
 	"Warehouse District" -- {"Skid Row" "Fashion District" "Seafood District" "Arts District"}
 	"WeHo Center City" -- {"Norma Triangle" "WeHo West" "WeHo East" "Beverly Grove @ Melrose" "Santa Monica Blvd"}
 	"WeHo East" -- {"WeHo Center City" "Hollywood and Highland" "Melrose" "Central Hollywood" "Santa Monica Blvd"}
-	"WeHo West" -- {"WeHo Center City" "West Beverly Grove" "Beverly Grove & Melrose" "Santa Monica Blvd"}
+	"WeHo West" -- {"WeHo Center City" "West Beverly Grove" "Beverly Grove @ Melrose" "Santa Monica Blvd"}
 	"West Beverly Grove" -- {"WeHo West" "Beverly Grove @ Beverly"}
 	"Western-Wilton" -- {"Windsor Square" "Saint Andrews Square" "Wilshire Blvd"}
 	"Westlake North" -- {"Rampart Village" "Westlake" "Historic Filipinotown" "Crown Hill"}
@@ -90,5 +95,5 @@ strict graph {
 	"Wilton Historic District" -- {"Larchmont Village" "Windsor Square" "Saint Andrews Square"}
 	"Windsor Square" -- {"Wilton Historic District" "Hancock Park" "Western-Wilton" "Wilshire Blvd"}
 	"Windsor Village" -- {"Fremont Place" "Wilshire Park" "Wilshire Blvd"}
-	"Yucca Corridor" -- {"whitley Heights" "Hollywood and Highland" "Downtown Hollywood" "Hollywood Blvd"}
+	"Yucca Corridor" -- {"Whitley Heights" "Hollywood and Highland" "Downtown Hollywood" "Hollywood Blvd"}
 }
