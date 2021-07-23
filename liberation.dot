@@ -82,12 +82,13 @@ strict graph {
 	"WeHo East" -- {"WeHo Center City" "Hollywood and Highland" "Melrose" "Central Hollywood" "Santa Monica Blvd"}
 	"WeHo West" -- {"WeHo Center City" "West Beverly Grove" "Beverly Grove & Melrose" "Santa Monica Blvd"}
 	"West Beverly Grove" -- {"WeHo West" "Beverly Grove @ Beverly"}
+	"Western-Wilton" -- {"Windsor Square" "Saint Andrews Square" "Wilshire Blvd"}
 	"Westlake North" -- {"Rampart Village" "Westlake" "Historic Filipinotown" "Crown Hill"}
 	"Westlake" -- {"MacArthur Park" "City West" "Westlake North" "Wilshire Blvd"}
+	"Whitley Heights" -- {"Yucca Corridor"}
 	"Wilshire Park" -- {"Windsor Village" "Koreatown @ Olympic" "Wilshire Blvd"}
-	"Western-Wilton" -- {"Windsor Square" "Saint Andrews Square" "Wilshire Blvd"}
 	"Wilton Historic District" -- {"Larchmont Village" "Windsor Square" "Saint Andrews Square"}
 	"Windsor Square" -- {"Wilton Historic District" "Hancock Park" "Western-Wilton" "Wilshire Blvd"}
 	"Windsor Village" -- {"Fremont Place" "Wilshire Park" "Wilshire Blvd"}
-	"Yucca Corridor"
+	"Yucca Corridor" -- {"whitley Heights" "Hollywood and Highland" "Downtown Hollywood" "Hollywood Blvd"}
 }
