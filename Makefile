@@ -1,4 +1,4 @@
-DOT = /usr/local/graphviz-*/bin/dot
+DOT = /usr/local/graphviz-*/bin/fdp
 
 liberation.svg: liberation.dot
 	cpp $^ | $(DOT) -Tsvg -o $@
