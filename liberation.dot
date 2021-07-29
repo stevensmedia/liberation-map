@@ -1,16 +1,4 @@
-#define NODE fillcolor="#e0e0e0"style="filled"width="1"height="1"shape="oval"fontisize="15"fontname="Helvetica"
-#define ROAD style="filled"width="2"height="2"shape="rectangle"fontsize="20"
-#define FREEWAY fillcolor="#ffb0b0"ROAD
-#define ARTERIAL fillcolor="#b0ffb0"ROAD
 strict graph {
-	node[NODE]
-	"110"[FREEWAY]
-	"101"[FREEWAY]
-	"Hollywood Blvd"[ARTERIAL]
-	"Santa Monica Blvd"[ARTERIAL]
-	"Sunset Blvd"[ARTERIAL]
-	"Wilshire Blvd"[ARTERIAL]
-
 	"Angelino Heights" -- {"Echo Park" "Victor Heights" "Sunset Blvd"}
 	"Arts District" -- {"Little Tokyo" "Seafood District" "Union Station" "Warehouse District"}
 	"Beachwood Canyon" -- {"Hollywood Dell" "Franklin Village" "Hollywoodland"}
