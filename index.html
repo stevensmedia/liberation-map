@@ -99,7 +99,7 @@ function resetGraffle() {
 			cursor: "move"
 		})
 		var text = r.text(curX, curX, obj.name)
-		var set = r.draggableSet([ellipse, text], [ellipse])
+		var set = r.draggableSet([ellipse, text])
 		set.id = ellipse.id + "-set"
 		eve.on("raphael.drag.move." + set.id, () => move(ellipse))
 		elementMap[obj._gvid] = set
