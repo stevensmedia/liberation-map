@@ -1,10 +1,10 @@
 <html>
 <head>
 <title>Map</title>
-<script src="raphael.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="eve.js" type="text/javascript" charset="utf-8"></script>
+<script src="raphael.js" type="text/javascript" charset="utf-8"></script>
 <script src="raphael.draggable-set.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-var eve = console.debug
 /* Based on code from raphaeljs.com:
    https://github.com/DmitryBaranovskiy/raphaeljs.com */
 Raphael.fn.connection = function (obj1, obj2, line, bg) {
@@ -71,19 +71,21 @@ function resetGraffle() {
 	var dragger = function () {
 		this.ox = this.type == "rect" ? this.attr("x") : this.attr("cx")
 		this.oy = this.type == "rect" ? this.attr("y") : this.attr("cy")
-		this.animate({"fill-opacity": .2}, 500)
+		// this.animate({"fill-opacity": .2}, 500)
 	}
 
-	var move = function (dx, dy) {
-		var att = this.type == "rect" ? {x: this.ox + dx, y: this.oy + dy} : {cx: this.ox + dx, cy: this.oy + dy}
-		this.attr(att)
+	window.foo = false
+	var move = function (th) {
 		for (var i = connections.length; i--;) {
-			r.connection(connections[i])
+			var conn = connections[i]
+			if(conn.to[0].id == th.id || conn.from[0].id == th.id) {
+				r.connection(connections[i])
+			}
 		}
 	}
 
 	var up = function () {
-		this.animate({"fill-opacity": 0}, 500)
+		// this.animate({"fill-opacity": 0}, 500)
 	}
 
 	try {
@@ -93,13 +95,12 @@ function resetGraffle() {
 		return
 	}
 
-	var r = Raphael("map", 2000, 2000)
+	var r = Raphael("map", 10000, 10000)
 
 	var elementMap = {}
 	var curX = 0;
 	shapes = xdot.objects.filter((obj => !obj.nodes)).map(function(obj) {
-		console.log(obj)
-		var ellipse = r.ellipse(curX += 100, curX, 50, 50)
+		var ellipse = r.ellipse(curX += 20, curX, 10, 10)
 		var color = Raphael.getColor()
 		ellipse.attr({
 			fill: color,
@@ -110,13 +111,17 @@ function resetGraffle() {
 		})
 		var text = r.text(curX, curX, obj.name)
 		var set = r.draggableSet([ellipse, text], [ellipse])
+		set.id = ellipse.id + "-set"
+		eve.on("raphael.drag.move." + set.id, () => move(ellipse))
 		elementMap[obj._gvid] = set
 		return set
 	})
 
+	/*
 	for (var i = 0, ii = shapes.length; i < ii; i++) {
-		shapes[i].drag(move, dragger, up)
+		shapes[i][0].drag(move, dragger, up)
 	}
+	*/
 
 	connections = xdot.edges.map(function(obj) {
 		var from = elementMap[obj.head]
@@ -139,17 +144,27 @@ window.onload = function () {
 </script>
 
 <style type="text/css">
+
 textarea {
 	width: 100%;
 	height: 8em;
 	font-family: Monaco, mono;
 }
+
 #map {
 	background: #f7f7f7;
+	max-width: 100%;
+	max-height: 50%;
+	overflow: scroll;
+}
+
+#map svg {
+	overflow: scroll;
 }
 </style>
 </head>
 <body>
+	<div id="main">
 	<div>
 		<h2>Paste JSON xdot here</h2>
 		<p><button id="submitxdot">Update JSON xdot</button></p>
@@ -165,7 +180,7 @@ textarea {
 		<h2>Map!</h2>
 		<div id="map"></svg>
 	</div>
-
+	</div>
 </body>
 </html>
 
