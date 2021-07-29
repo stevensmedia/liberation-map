@@ -68,13 +68,6 @@ function resetGraffle() {
 	var connections = []
 	var shapes = []
 
-	var dragger = function () {
-		this.ox = this.type == "rect" ? this.attr("x") : this.attr("cx")
-		this.oy = this.type == "rect" ? this.attr("y") : this.attr("cy")
-		// this.animate({"fill-opacity": .2}, 500)
-	}
-
-	window.foo = false
 	var move = function (th) {
 		for (var i = connections.length; i--;) {
 			var conn = connections[i]
@@ -82,10 +75,6 @@ function resetGraffle() {
 				r.connection(connections[i])
 			}
 		}
-	}
-
-	var up = function () {
-		// this.animate({"fill-opacity": 0}, 500)
 	}
 
 	try {
@@ -116,12 +105,6 @@ function resetGraffle() {
 		elementMap[obj._gvid] = set
 		return set
 	})
-
-	/*
-	for (var i = 0, ii = shapes.length; i < ii; i++) {
-		shapes[i][0].drag(move, dragger, up)
-	}
-	*/
 
 	connections = xdot.edges.map(function(obj) {
 		var from = elementMap[obj.head]
